@@ -64,4 +64,42 @@ git tag -d <version> --> borra la version especificada
 
 git tag -f -a <version> -m "<texto>" <hash> --> renombra la version del commit especificado
 
-git log --online --> muestra los log en una sola linea sin la fecha,nombre y email
+git log --oneline --> muestra los log en una sola linea sin la fecha,nombre y email
+
+git log -3 --> cantidad de commit a mostrar
+
+git diff <hash del commit> --> muestra que cambios hubo en el commit especificado
+
+git diff <hash del commit> <hash del commit> --> compara las versiones o commit 
+
+git diff [version 1] vs  [version 2] --> compara las versiones o commit 
+
+git reset --soft [hash del commit] --> quita los cambios apartir del especificado, pero lo mantiene preparado para el commit, los mantiene en el stage
+
+git reset --mixed [hash del commit] --> quita los cambios apartir del especificado, saca los archivos y modificaciones en el stage 
+
+git reset --hard  --> borra los archivos agregados al proyecto y quita las modificaciones,
+solo los archivos que estan en el stage o commit.
+
+git reset --hard [hash del commit] --> borra los archivos agregados al proyecto y quita las modificaciones,
+solo los archivos que estan en el stage o commit.(guardar los log en un archivo antes de hacer un --hard)
+
+git config --global core.editor "code --wait" --> cuando ingresamos un commit sin descripcion abre el editor seleccionado por nosotros.
+
+#ramas
+
+git branch -l --> lista todas las ramas actuales
+
+git branch <nombre de la rama que se va crear>
+
+git branch -d <nombre de la rama que se va a borrar>
+
+git branch -D <nombre de la rama que se va a borrar por mas que tenga commits>
+
+git branch -m <nombre de la rama a reemplazar> <nombre nuevo>
+
+git checkout <nombre de la rama a trabajar>
+
+git checkout -b <nueva-imagen> --> crea una nueva rama y se pasa a la misma
+
+git merge <nombre de la rama> --> lo que hace esta funcion es mesclar la rama seleccionada con la que estamos posicionados actualmente aplica los cambios del seleccionado sobre la cual estamos en este caso (master)
