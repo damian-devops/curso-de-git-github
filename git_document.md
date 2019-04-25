@@ -102,4 +102,10 @@ git checkout <nombre de la rama a trabajar>
 
 git checkout -b <nueva-imagen> --> crea una nueva rama y se pasa a la misma
 
+git checkout <nombre del archivo> --> este comando saca las modificaciones echas en el archivo a su ultimo estado guardado en el stage.
+
 git merge <nombre de la rama> --> lo que hace esta funcion es mesclar la rama seleccionada con la que estamos posicionados actualmente aplica los cambios del seleccionado sobre la cual estamos en este caso (master)
+
+git rebase <nombre de la rama> --> lo hace de forma ordenada la mescla (solo se recomienda hacerlo localmente
+porque reescribiria los cambios de los demas repositorios)
+
