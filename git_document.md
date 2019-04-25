@@ -109,3 +109,4 @@ git merge <nombre de la rama> --> lo que hace esta funcion es mesclar la rama se
 git rebase <nombre de la rama> --> lo hace de forma ordenada la mescla (solo se recomienda hacerlo localmente
 porque reescribiria los cambios de los demas repositorios)
 
+git cherry-pick <nombre del commit> --> lo que hace es pasar este commit de una rama a la que estamos actualmente
