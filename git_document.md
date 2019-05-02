@@ -1,13 +1,13 @@
-/////////////////////////////
-///configurar git (entorno)//
-/////////////////////////////
+
+#configurar git (entorno)
+
 git config --global user.email -> sch.damian@hotmail.com
 git config --global user.name  -> damian_devops
 git config --global color.ui true
 
-/////////////
-///terminal//
-////////////
+
+#terminal
+
 mostrar y crear carpetas
 
 cd :-/
@@ -24,9 +24,9 @@ rm <nombre del archivo> -> borra el archivo
 
 rm -rf <nombre de la carpeta> -> borra la carpeta
 
-////////////////
-//comandos git//
-///////////////
+
+#comandos git
+
 stage: es la parte quedan los archivos pendientes a subir
 se guardar en x carpeta del directorio proyecto
 
@@ -110,3 +110,27 @@ git rebase <nombre de la rama> --> lo hace de forma ordenada la mescla (solo se 
 porque reescribiria los cambios de los demas repositorios)
 
 git cherry-pick <nombre del commit> --> lo que hace es pasar este commit de una rama a la que estamos actualmente
+
+
+#github
+
+fork para aportar algo a un proyecto o agregar modificaciones, se hace una copia de ese repositorio lo manda a 
+tus repositorios
+
+ssh-keygen -t rsa -b 4096 -C "sch.damian@hotmail.com" --> generador de llave para ssh
+
+pbcopy < ~/ .shh/id_rsa.pub --> copia la llave publica (en unix)
+< ~/.ssh/id_rsa.pub | clip --> copia la llave publica (en windows)
+
+git remote add origin <nombre de la ruta ssh>
+
+git remote remove origin <nombre de la ruta ssh>
+
+git fetch origin master --> me trae los archivos de esa rama en este caso la rama master me va pedir la contraseña la cual utilize para crear el ssh en este caso (123456) ,no la sshkeygen
+
+git merge origin/master --allow-unrelated-histories --> para hacer una mescla con el cliente en este caso
+github
+
+git pull origin master --> me trae los cambios echos en el repositorio remoto de la rama master(es la mejor opcion)
+
+git push origin master --tags --> envia todos los tags
